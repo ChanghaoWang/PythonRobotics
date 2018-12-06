@@ -4,7 +4,9 @@ Path Planning Sample Code with Randamized Rapidly-Exploring Random Trees (RRT)
 @author: AtsushiSakai(@Atsushi_twi)
 
 """
-
+import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import random
 import math
