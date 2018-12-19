@@ -251,6 +251,8 @@ def PathSmoothing(path, maxIter, obstacleList):
 def main():
     # ====Search Path with RRT====
     # Parameter
+    obs1 = [(5,5,1)]
+    obs2 = [(5,5,2)] # = np.dot(Y, R) + np.tile(t, (np.shape(Y)[0], 1)) nonrigid registration
     obstacleList = [
         (5, 5, 1),
         (3, 6, 2),
@@ -260,7 +262,7 @@ def main():
         (9, 5, 2)
     ]  # [x,y,size]
     rrt = RRT(start=[0, 0], goal=[5, 10],
-              randArea=[-2, 15], obstacleList=obstacleList)
+              randArea=[-2, 15], obstacleList=obs1) #Obstacle!
     path = rrt.Planning(animation=show_animation)
 
     # Path smoothing
